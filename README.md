@@ -35,7 +35,7 @@ Stratified 5-fold cross-validation (mean ± std):
 | Random Forest | 0.905 ± 0.012 | 0.303 ± 0.043 | 0.830 | 0.186 |
 | Logistic Regression | 0.673 ± 0.023 | 0.134 ± 0.011 | 0.076 | 0.572 |
 
-![ROC curves](results/roc_curves_all_models.png)
+![ROC curves](roc_curves_all_models.png)
 
 **Key findings**
 
@@ -44,7 +44,7 @@ Stratified 5-fold cross-validation (mean ± std):
 - Logistic Regression performs poorly here, mainly because the financial ratios contain extreme outliers and non-linear relationships.
 - The most important predictors are profitability measures, such as gross profit over the last three years relative to total assets and operating profit relative to financial expenses.
 
-![XGBoost feature importance](results/feature_importance_plot_xgboost.png)
+![XGBoost feature importance](feature_importance_plot_xgboost.png)
 
 **Choosing the threshold.** With the default threshold of 0.5, XGBoost has recall 0.68 and precision 0.36. Raising it to 0.7 increases precision to 0.63 and F1 to 0.58, at the cost of recall dropping to 0.54. A bank that wants to miss as few defaults as possible would keep a lower threshold; one that wants fewer false alarms would choose a higher one.
 
@@ -65,7 +65,7 @@ Stratified 5-fold cross-validation (mean ± std):
 ```
 bankruptcy_prediction.ipynb   full analysis
 requirements.txt              Python libraries
-results/                      key plots
+*.png                         key plots
 ```
 
 ## How to run
